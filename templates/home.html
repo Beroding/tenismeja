@@ -1,89 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IGS Table Tennis</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Gupter:wght@400;500;700&family=Instrument+Serif&family=Jacquard+12+Charted&family=Jersey+10&family=Pacifico&family=Pixelify+Sans&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Gupter:wght@400;500;700&family=Instrument+Serif&family=Jacquard+12+Charted&family=Jersey+10&family=Pacifico&family=Pixelify+Sans&display=swap" rel="stylesheet">
+{% extends 'layout.html' %}
 
-    <style>
-        * {
-            margin: 0px;
-            text-decoration: none;
-            user-select: none;
-        }
-
-        body {
-            /* background-image: url(wallpaper.jpg); */
-        }
-
-        img.logo {
-            width: 80px;
-            height: 80px;
-        }
-
-        nav.nav {
-            background-color: black;
-            color: white;
-            height: 80px;
-            justify-content: space-between;
-            font-size: 40px;
-            font-family: "Instrument Serif", serif;
-        }
-
-        nav a {
-            color: white;
-            margin-left: 100px;
-            font-size: 30px;
-        }
-
-        nav {
-            text-align: center;
-        }
-
-        nav span {
-            margin-right: 80vh;
-            cursor: pointer;
-        }
-
-        section.content {
-            text-align: center;
-            font-family: "Instrument Serif", serif;
-        }
-
-        section.content h1 {
-            font-size: 100px;
-            font-weight: bolder;
-            margin-top: 60px;
-            margin-bottom: 50px;
-            text-transform: uppercase;
-        }
-
-        hr.new4 {
-            border: 3px solid black;
-        }
-
-    </style>
-</head>
-<body>
-    <nav class="nav">
-        <div class="navigation-content">
-            <span class="logo">
-                Table Tennis
-            </span>
-            <a href="absen">Attendance</a>
-            <a href="aktivitas">Activity</a>
-            <a href="toko">Shop</a>
-        </div>
-    </nav>
+{% block content %}
     <section class="content">
         <h1>Our Club</h1>
-        <hr class="new4" style="width: 20vh; text-align: center;">
+        <hr class="new4" style="width: 20vh; margin-left: 89vh;">
+
+        <h2>Ignatius Global School Table Tennis Club.</h2>
+        <button class="about">ABOUT US</button>
     </section>
-</body>
-</html>
+    <section class="about" id="about">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis deleniti earum quaerat fugiat! Officia voluptates cum est at iusto, itaque consectetur vel provident cumque ex debitis expedita tenetur asperiores sunt! Quaerat, nobis. Molestias id quaerat commodi, eveniet eum totam. Explicabo esse nihil eius. Debitis, veritatis? Blanditiis exercitationem architecto quam consequuntur totam saepe sit quasi perspiciatis aperiam obcaecati, corrupti error iste, officia dolorum assumenda voluptatem magni sequi, libero quisquam! Quaerat iure quibusdam eaque modi necessitatibus rem, dignissimos id sint placeat est vitae eos cumque nesciunt. Omnis repudiandae maxime iusto, quasi voluptatibus accusamus corporis porro laboriosam? Commodi et fugiat perferendis incidunt ut.</p>
+    </section>
+{% endblock %}
