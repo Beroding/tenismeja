@@ -1,14 +1,26 @@
 {% extends 'layout.html' %}
 
 {% block content %}
-    <section class="content">
-        <h1>Our Club</h1>
-        <hr class="new4" style="width: 20vh; margin-left: 89vh;">
+    <section class="content" id="home">
+        <h1>Table Tennis Club</h1>
+        <hr class="new4" style="width: 20vh; margin: 0px auto;">
 
         <h2>Ignatius Global School Table Tennis Club.</h2>
-        <button class="about">ABOUT US</button>
+        <div class="about">
+            <a href="#about"><i class="arrow down"></i></a>
+        </div>
     </section>
     <section class="about" id="about">
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis deleniti earum quaerat fugiat! Officia voluptates cum est at iusto, itaque consectetur vel provident cumque ex debitis expedita tenetur asperiores sunt! Quaerat, nobis. Molestias id quaerat commodi, eveniet eum totam. Explicabo esse nihil eius. Debitis, veritatis? Blanditiis exercitationem architecto quam consequuntur totam saepe sit quasi perspiciatis aperiam obcaecati, corrupti error iste, officia dolorum assumenda voluptatem magni sequi, libero quisquam! Quaerat iure quibusdam eaque modi necessitatibus rem, dignissimos id sint placeat est vitae eos cumque nesciunt. Omnis repudiandae maxime iusto, quasi voluptatibus accusamus corporis porro laboriosam? Commodi et fugiat perferendis incidunt ut.</p>
+        <div class="about">
+            <a href="#home"><i class="arrow up"></i></a>
+        </div>
+        <div class="profile">
+            <img src="" alt="Farren Putra">
+            <p>Ignatius Global School Tennis Table Club was made in 2022. 
+                This club was initially made from the popularity of Table Tennis in IGS School. In 2021, </p>
+            <div class="about">
+                <a href="#about"><i class="arrow down"></i></a>
+            </div>
+        </div>
     </section>
 {% endblock %}

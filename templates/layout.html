@@ -7,9 +7,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gupter:wght@400;500;700&family=Instrument+Serif&family=Jacquard+12+Charted&family=Jersey+10&family=Pacifico&family=Pixelify+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/style.css">
+    <!-- <link rel="stylesheet" href="styles/style.css"> -->
     <style>
         * {
+            overflow: hidden;
+            scroll-behavior: smooth;
             margin: 0px;
             text-decoration: none;
             user-select: none;
@@ -24,11 +26,12 @@
         }
 
         body {
+            color: white;
             font-family: "Instrument Serif", serif;
-            background-image: url('/images/wallpaper.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+            background-image: url(https://c1.wallpaperflare.com/preview/532/555/810/art-graffiti-wall-table-tennis.jpg);
+            background-size: 100% 100vh;
+            /* background-position: center;
+            background-repeat: repeat; */
         }
 
         img.logo {
@@ -36,66 +39,130 @@
             height: 80px;
         }
 
+        header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
         nav.nav {
-            background-color: black;
             color: white;
+            /* background-color: rgba(0, 0, 0, 0.7); */
             height: 80px;
+            width: 100%;
             display: flex;
             align-items: center;
             justify-content: space-between;
             padding: 0 20px;
-            font-size: 40px;
+            font-size: 50px;
+            font-weight: bolder;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
         }
 
         nav a {
             color: white;
             margin-left: 100px;
             font-size: 30px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffcc00;
         }
 
         section.content {
+            min-height: 100vh;
             flex: 1;
             text-align: center;
             font-family: "Instrument Serif", serif;
             padding: 20px;
+            padding-top: 100px;
+        }
+
+        section.about {
+            width: 100vh;
+            min-height: 90vh;
+            margin: 0px auto;
+            /* background-color: black; */
+            color: white;
         }
 
         section.heading {
             flex: 1;
             text-align: center;
             font-family: "Instrument Serif", serif;
-            /* padding: 20px; */
-            background-color: red;
+            padding: 20px 100px 100px;
+            /* background-color: red; */
         }
 
         section.content h1 {
-            font-size: 100px;
+            color: white;
+            font-size: 80px;
             font-weight: bolder;
-            margin-top: 100px;
+            margin-top: 15vh;
+            margin-bottom: 50px;
+            text-transform: uppercase;
+        }
+
+        section.content h1.a {
+            color: white;
+            font-size: 80px;
+            font-weight: bolder;
+            margin-top: 10vh;
             margin-bottom: 50px;
             text-transform: uppercase;
         }
 
         section.content h2 {
+            color: white;
             margin-top: 50px;
             font-size: 35px;
         }
 
         hr.new4 {
-            border: 3px solid black;
+            border: 3px solid white;
             width: 20vh;
             margin: 0 auto;
         }
-        
-        button.about {
-            margin-top: 20vh;
-            width: 180px;
-            height: 60px;
-            background-color: red;
-            font-size: 20px;
+
+        .arrow {
+            border: solid white;
+            border-width: 3px 6px 6px 3px;
+            display: inline-block;
+            padding: 3px;
+        }
+
+        .down {
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+        }
+
+        .up {
+            transform: rotate(-135deg);
+            -webkit-transform: rotate(-135deg);
+        }
+
+        div.about a {
+            text-decoration: none;
+            color: black;
             font-weight: bolder;
-            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        div.about {
+            display: inline-block;
+            margin: 0px auto;
+            margin-top: 25vh;
+            width: 50px;
+            height: 30px;
+            /* background-color: white; */
+            font-size: 25px;
+            border-radius: 30px;
             cursor: pointer;
+            font-weight: bolder;
+            text-transform: uppercase;
         }
 
         footer {
@@ -104,82 +171,133 @@
             text-align: center;
             height: 30px;
             font-size: 20px;
-            /* padding: 5px 0; */
             flex-shrink: 0;
+            position: -webkit-sticky;
+            position: static;
+
         }
 
         .login-form {
-            margin-top: 50px;
             display: inline-block;
             text-align: left;
+            background-color: rgba(0, 0, 0, 0.7);
+            width: 60vh;
+            height: 35vh;
+            border: 1px white solid;
+            padding-top: 10px;
         }
 
         .login-form input {
             margin: 10px 0;
             padding: 10px;
             font-size: 16px;
+            display: block;
+            border-radius: 15px;
+            width: 30vh;
+            margin-left: 15vh;
         }
 
         .login-form button {
-            margin-top: 10px;
-            padding: 10px;
+            margin-top: 50px;
+            padding: 5px 15px 5px 15px;
             font-size: 16px;
             font-weight: bold;
-            border-radius: 5px;
+            border-radius: 15px;
             cursor: pointer;
+            margin-left: 35vh;
         }
+
         div.heading {
             width: 90vh;
-            height: 30vh;
-            background-color: black;
+            height: 40vh;
+            /* background-color: red; */
             color: white;
             margin: 0px auto;
+            /* margin-top: 30px; */
         }
 
         div.heading p {
             font-size: 20px;
+            margin-top: 30px;
+            font-weight: bold;
         }
 
         section div.banner {
-          background-color: blue;  
-          width: 100%;
-          height: 40vh;
+            margin: 0px auto;
+            width: 80%;
+            height: 55vh;
+            padding: 50px;
+            /* background-color: black; */
+            background-size: cover;
+            background-image: url(https://socialmediamarketer.id/wp-content/uploads/2021/10/pexels-catia-matos-1072179.jpg)
         }
         
         button.read {
             width: 17vh;
             height: 45px;
             border-radius: 10px;
-            font-size: 20px;
+            font-size: 13px;
             font-weight: bolder;
+            margin-top: 50px;
+            border: 1px black;
         }
 
-        div.line {
+        section.shop {
+            height: 60vh;
+            width: 80%;
+            margin-top: 20px;
             display: inline-block;
-            width: 100%;
-            background-color: white;
+            background-color: whitesmoke;
             margin: 0px auto;
+        }
+
+        div.shop {
+            /* background-color: red; */
+            margin-top: 20px;
+            height: 30vh;
+        }
+
+        div.catalogue-content {
+            display: inline-block;
+        }
+
+        div.profile {
+            margin-top: 20vh;
+            background-color: red;
+            height: 50vh;
         }
     </style>
 </head>
 <body>
-    <nav class="nav">
-        <div class="navigation-content">
-            <a href="{{ url_for('index') }}" class="logo">
-                Homepage
-            </a>
-            <a href="{{ url_for('attendance') }}">Attendance</a>
-            <a href="{{ url_for('activity') }}">Activity</a>
-            <a href="{{ url_for('shop') }}">Shop</a>
-            <a href="{{ url_for('login')}}">Join Us</a>
-        </div>
-    </nav>
+    <header>
+        <nav class="nav">
+            <div class="navigation-content">
+                <a href="{{ url_for('index') }}" class="logo">
+                    Homepage
+                </a>
+                <a href="{{ url_for('attendance') }}">Attendance</a>
+                <a href="{{ url_for('activity') }}">Activity</a>
+                <a href="{{ url_for('shop') }}">Shop</a>
+            </div>
+        </nav>
+    </header>
+
+    {% with messages = get_flashed_messages(with_categories=True) %}
+      {% if messages %}
+        <ul class="flashes">
+          {% for category, message in messages %}
+            <li class="{{ category }}">{{ message }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
 
     {% block content %}
     {% endblock %}
 
     <footer>
         &copy; 2023 IGS Table Tennis Club
+        <a href="{{ url_for('logout') }}">Logout</a>
     </footer>
 </body>
 </html>

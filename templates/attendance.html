@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <section class="content">
+        <h1>Attendance</h1>
+        <form method="POST" action="{{ url_for('attendance') }}">
+            <form action="" method="POST">
+                <input type="text" name="fullname" placeholder="Full Name" style="width: 35vh; height: 5vh; border-radius: 5px;" required >
+                <input type="text" name="kelas" placeholder="Class" style="width: 35vh; height: 5vh; border-radius: 5px; margin-left: 5px; margin-right: 5px;" required>
+                <button type="submit" style="height: 5vh; border-radius: 5px;">Mark Attendance</button>
+            </form>
+        </form>
+    </section>
+{% endblock %}

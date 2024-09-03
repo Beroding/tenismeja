@@ -1,5 +1,4 @@
-{% extends 'home.html' %}
-
+{% extends 'layout.html' %}
 
 {% block content %}
     <section class="heading">
@@ -7,13 +6,19 @@
             <div class="heading">
                 <h1 style="text-transform: none; font-size: 70px;">Find What You Need.</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus eos molestiae in harum laudantium. Quibusdam hic odit assumenda praesentium amet eligendi voluptatibus distinctio similique dignissimos? Neque nostrum similique amet dolores, dolorum pariatur quis, possimus doloremque quia accusamus nihil numquam. Quaerat.</p>
-                <button class="read">Read More</button>
+                <button class="read">Find More</button>
             </div>   
         </div>
-        <div class="line">
-            <p style="font-weight: bolder; font-size: 20px;">SHOP NOW</p>
-            <hr class="new4" style="width: 100vh">
-        </div>
+        <section class="shop">
+            <div class="shop">
+                <h2 style="font-weight: bold; font-size: 25px;">Our Catalogue</h2>
+                <br>
+                <div class="catalogue-content">
+                    <span><img src="" alt=""></span>
+                </div>
+                <!-- <hr class="new4" style="width: 80vh;"> -->
+            </div>
+        </section>
         
     </section>
 {% endblock %}
